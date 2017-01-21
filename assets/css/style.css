@@ -8,14 +8,15 @@
 
 body {
   
-  font-size: 20px;
+  font-size: 18px;
+  font-family: sans-serif;
   line-height: 1.5;
   color: #777777;
 }
 
 
 header {
-  /*width:80%;*/
+
   width:800px;
   height: 100%;
   margin: 0 auto 0 auto;
@@ -40,9 +41,6 @@ li  {
 
 } 
 
-li a first-child {
-    border-right: none;
-    }
 
 
 li a {
@@ -52,17 +50,34 @@ li a {
   
 }
 
+li:hover {
+  background-color: #4aaaa5;
+}
+
+
+
+li:nth-child(1){
+    border-right: none;
+    }
+
+
+h1, h2, h3 {
+   font-family: Georgia;
+   }
+
 h1 {
   
   float: none;
   clear: none;
   background-color:  #4aaaa5;
-  margin-left: 0;
+position: relative;
+bottom: 5px;
+left: -30px;
   display: inline;
   color: #ffffff;
-  font-family: Arial;
+  
   font-size: 25px;
-  padding: 1%;
+  padding: 2%;
   
 
 } 
@@ -73,7 +88,7 @@ section {
 
 #background {
   clear: both;
-  width:  80%;
+  width:  64%;
   border: 1px solid #cccccc;
   height: 100%;
   background-image: url(../images/bright_squares_@2X.png);
@@ -88,8 +103,9 @@ section {
 #connect {
   float: right;
   position:relative;
-  right: 15%;
-  width: 270px;
+  overflow: auto;
+  right: 3%;
+  width: 28%;
   padding: 0 1% 0 1%;
   text-align: center;
   background: #ffffff;
@@ -99,6 +115,7 @@ section {
 
 
 h2 {
+    font-size: 20px;
     border-bottom: 1px solid #bbb;
   
 }
@@ -115,16 +132,24 @@ h2 {
   margin: 5%;
 }
 
-
+.logo:hover  {
+  -ms-transform: rotate(-30deg);
+  -webkit-transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+}
 
 #content {
   clear: none;
   float: none;
-  width: 650px;
+  width: 68%;
+  height: 100%;
   border: 2px solid #dddddd;
   background:  #ffffff;
   text-align: left;
   padding: 3%;
+  overflow: auto; 
 }
 
 
@@ -136,7 +161,7 @@ h3 {
 
 }
 
-p {
+#description {
   text-align: left;
 
    
@@ -148,6 +173,38 @@ p {
   float: left;
   margin-left: 2%;
   margin-right: 10px;
+
+}
+
+.projects {
+width: 40%;
+position: relative; 
+float: left;
+ margin: 0 10px 10px 5%;
+
+}
+
+.project-image {
+  clear: both;
+  width: 100%;
+  float: left;
+   
+}
+
+.project-image:hover {
+  height: 110%;
+  width: 110%;
+ 
+}
+
+.label {
+  position:  absolute;
+  text-align: center;
+  color: #ffffff;
+  background-color: #4aaaa5;
+  bottom: 5px;
+  width: 100%;
+  padding: 5% 0;
 }
 
 
@@ -184,7 +241,13 @@ input[type=email], select {
 
 
 }
+input:hover  {
+  background-color: lightblue;
+}
 
+#message:hover  {
+  background-color: lightblue;
+}
 input[type=submit] {
     background-color: #4aaaa5;
     border: none;
@@ -200,7 +263,8 @@ input[type=submit]:hover {
   }
 
 footer {
-  clear: both;width:  80%;
+  clear: both;
+  width:  64%;
   padding: 5px;
   background: #666666; 
   font-size: 12px;
